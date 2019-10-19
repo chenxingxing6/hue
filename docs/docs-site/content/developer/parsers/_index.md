@@ -9,8 +9,11 @@ This guide goes you through the steps necessary to create an autocompleter for a
 
 * showing only valid syntax in the autocomplete
 * getting the list of tables, columns automatically
+* syntax highlighting
 
-## Parser Theory
+# Parser
+
+## Theory
 
 There are several parsers in Hue already (e.g. one for Impala, one for Hive..) and a generic SQL that is used for other dialects. The parsers are written using a [bison](https://www.gnu.org/software/bison/) grammar and are generated with [jison](https://github.com/zaach/jison). They arere 100% Javascript and live on the client side, this gives the performance of a desktop editor in your browser.
 
@@ -245,3 +248,11 @@ In order to use the newly generated parsers we have to add them to the webpack b
 While developing it will speed up if the webpack bundling runs in the background, for this open two terminal sessions and run `npm run dev` in one and `npm run dev-workers` in the other. It will then monitor changes to the files and build a lot quicker.
 
 After the bundling you can now test it directly in the editor!
+
+# Syntax highlighting
+
+# Syntax formatting
+
+# Function wiki
+
+# Language wiki
